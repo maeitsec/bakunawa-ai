@@ -1,151 +1,226 @@
-<p align="center">
-  <h1 align="center">claude-code-pentest</h1>
-  <p align="center">
-    <strong>6 Claude Code skills that automate the entire pentest lifecycle.<br>From recon to exploit chains to bug bounty reports — just give it a domain.</strong>
-  </p>
-  <p align="center">
-    <img src="https://img.shields.io/badge/python-3.8+-blue.svg" alt="Python 3.8+">
-    <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License: MIT">
-    <img src="https://img.shields.io/badge/Claude-Code-blueviolet.svg" alt="Claude Code">
-    <img src="https://img.shields.io/badge/skills-6-orange.svg" alt="6 Skills">
-    <img src="https://img.shields.io/badge/scripts-43-red.svg" alt="43 Scripts">
-    <img src="https://img.shields.io/badge/pip_dependencies-0-brightgreen.svg" alt="Zero Dependencies">
-  </p>
-  <p align="center">
-    Built by <a href="https://maeitsec.github.io">maeitsec</a>
-  </p>
-</p>
+<div align="center">
 
----
+<br/>
 
-> **WARNING: Authorized security testing only.** Unauthorized access to computer systems is illegal.
+```
+ ██████╗██╗      █████╗ ██╗   ██╗██████╗ ███████╗
+██╔════╝██║     ██╔══██╗██║   ██║██╔══██╗██╔════╝
+██║     ██║     ███████║██║   ██║██║  ██║█████╗  
+██║     ██║     ██╔══██║██║   ██║██║  ██║██╔══╝  
+╚██████╗███████╗██║  ██║╚██████╔╝██████╔╝███████╗
+ ╚═════╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚══════╝
+     CODE  ·  PENTEST  ·  FRAMEWORK
+```
+
+**6 Claude Code skills. Full pentest lifecycle. Just give it a domain.**
+
+*From recon to exploit chains to bug bounty reports — fully automated.*
+
+<br/>
+
+[![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
+[![License](https://img.shields.io/badge/License-MIT-22C55E?style=flat-square)](LICENSE)
+[![Claude Code](https://img.shields.io/badge/Claude-Code-7C3AED?style=flat-square)](https://claude.ai)
+[![Skills](https://img.shields.io/badge/Skills-6-F97316?style=flat-square)](#skills)
+[![Scripts](https://img.shields.io/badge/Scripts-43-EF4444?style=flat-square)](#scripts)
+[![Zero Deps](https://img.shields.io/badge/pip%20deps-zero-10B981?style=flat-square)](#requirements)
+
+<br/>
+
+> ⚠️ **Authorized security testing only.**
+> Unauthorized access to computer systems is illegal.
 > Read the [full disclaimer](DISCLAIMER.md) before use.
 
+<br/>
+
+*Built by [maeitsec](https://maeitsec.github.io)*
+
+</div>
+
 ---
 
-## The Pipeline
+## 🗺️ The Pipeline
 
 ```
-DOMAIN INPUT
-    │
-    ▼
-┌─────────────────────┐
-│  recon-dominator     │  Subdomain enum, port scan, OSINT, dorking, Wayback
-└────────┬────────────┘
-         │
-    ┌────┼──────────────────────┐
-    │    │                      │
-    ▼    ▼                      ▼
-┌────────────┐ ┌──────────┐ ┌──────────────┐
-│ webapp-    │ │ api-     │ │ cloud-pivot- │
-│ exploit-   │ │ breaker  │ │ finder       │
-│ hunter     │ │          │ │              │
-└─────┬──────┘ └────┬─────┘ └──────┬───────┘
-      │              │              │
-      └──────┬───────┘──────────────┘
-             ▼
-┌─────────────────────────┐
-│  attack-path-architect  │  MITRE ATT&CK trees, kill chains
-└────────┬────────────────┘
-         ▼
-┌─────────────────────────┐
-│  vuln-chain-composer    │  Chain exploits → bug bounty report
-└─────────────────────────┘
+                         ┌─────────────────────────┐
+                         │                         │
+             ┌──────────▶│     recon-dominator      │◀──────────┐
+             │           │  Subdomain · Port · OSINT│           │
+             │           └───────────┬─────────────┘           │
+             │                       │                          │
+       DOMAIN INPUT          ┌───────┴────────┐            DOMAIN LIST
+             │               │                │                  │
+             │               ▼                ▼                  │
+             │   ┌───────────────────┐  ┌─────────────────┐     │
+             │   │  webapp-exploit-  │  │   api-breaker   │     │
+             │   │     hunter        │  │                 │     │
+             │   │ SQLi·XSS·SSRF·    │  │ BOLA·JWT·GraphQL│     │
+             │   │ IDOR·SSTI·RCE     │  │ Mass Assignment │     │
+             │   └────────┬──────────┘  └────────┬────────┘     │
+             │            │                       │              │
+             │            │   ┌───────────────────┘              │
+             │            │   │         ▼                        │
+             │            │   │  ┌─────────────────┐            │
+             │            │   │  │ cloud-pivot-    │            │
+             │            │   │  │    finder       │            │
+             │            │   │  │ S3·Takeover·    │            │
+             │            │   │  │ CI/CD·Serverless│            │
+             │            │   │  └────────┬────────┘            │
+             │            └───┴──────┬────┘                      │
+             │                       ▼                            │
+             │           ┌───────────────────────┐               │
+             └──────────▶│  attack-path-architect │◀─────────────┘
+                         │  MITRE ATT&CK · Kill   │
+                         │  Chains · Trust Maps   │
+                         └───────────┬───────────┘
+                                     │
+                                     ▼
+                         ┌───────────────────────┐
+                         │   vuln-chain-composer  │
+                         │  Chain Exploits · CVSS │
+                         │  PoC Gen · Bug Reports │
+                         └───────────────────────┘
 ```
 
-## What Each Skill Does
+---
+
+## 🛠️ Skills at a Glance
 
 | # | Skill | What It Does | Scripts |
-|---|-------|-------------|---------|
-| 1 | **recon-dominator** | Subdomain enumeration, port scanning, tech fingerprinting, OSINT, Google dorking, Wayback analysis | 8 |
-| 2 | **attack-path-architect** | Asset classification, trust mapping, MITRE ATT&CK attack trees, kill chain generation | 3 |
-| 3 | **webapp-exploit-hunter** | SQLi, XSS, SSRF, IDOR, SSTI, auth bypass, file upload, race conditions + PoC generation | 11 |
-| 4 | **api-breaker** | API discovery, schema reconstruction, BOLA/BFLA, mass assignment, JWT attacks, GraphQL abuse | 8 |
-| 5 | **cloud-pivot-finder** | Cloud provider detection, S3/GCS/Azure buckets, subdomain takeover, serverless, CI/CD exposure | 7 |
-| 6 | **vuln-chain-composer** | Cross-domain vuln correlation, exploit chain composition, CVSS recalculation, bug bounty reports | 6 |
+|:-:|-------|-------------|:-------:|
+| `01` | [**recon-dominator**](#-recon-dominator) | Subdomain enum, port scanning, tech fingerprinting, OSINT, Google dorking, Wayback analysis | **8** |
+| `02` | [**attack-path-architect**](#-attack-path-architect) | Asset classification, trust mapping, MITRE ATT&CK attack trees, kill chain generation | **3** |
+| `03` | [**webapp-exploit-hunter**](#-webapp-exploit-hunter) | SQLi, XSS, SSRF, IDOR, SSTI, auth bypass, file upload, race conditions + PoC generation | **11** |
+| `04` | [**api-breaker**](#-api-breaker) | API discovery, schema reconstruction, BOLA/BFLA, mass assignment, JWT attacks, GraphQL abuse | **8** |
+| `05` | [**cloud-pivot-finder**](#-cloud-pivot-finder) | Cloud provider detection, S3/GCS/Azure buckets, subdomain takeover, serverless, CI/CD exposure | **7** |
+| `06` | [**vuln-chain-composer**](#-vuln-chain-composer) | Cross-domain vuln correlation, exploit chain composition, CVSS recalculation, bug bounty reports | **6** |
 
-**43 Python scripts total. Zero pip dependencies. Pure standard library.**
+> **43 Python scripts · Zero pip dependencies · Pure standard library**
 
-## Quick Start
+---
+
+## ⚡ Quick Start
 
 ```bash
-# Clone
+# 1. Clone
 git clone https://github.com/maeitsec/claude-code-pentest.git
 cd claude-code-pentest
 
-# Install all skills (personal - available in all your Claude Code projects)
-for skill in recon-dominator attack-path-architect webapp-exploit-hunter api-breaker cloud-pivot-finder vuln-chain-composer; do
+# 2. Install all skills globally
+for skill in recon-dominator attack-path-architect webapp-exploit-hunter \
+             api-breaker cloud-pivot-finder vuln-chain-composer; do
     cp -r "$skill" ~/.claude/skills/
 done
 
-# Verify
+# 3. Verify installation
 # Open Claude Code and ask: "What skills are available?"
 ```
 
 Then just talk to Claude:
 
 ```
-Run full reconnaissance on example.com
+❯ Run full reconnaissance on example.com
+❯ Find all vulnerabilities on app.example.com
+❯ Chain all findings and generate a bug bounty report
 ```
 
-```
-Find vulnerabilities on app.example.com
-```
+---
+
+## 🔁 Full Pentest Workflow
 
 ```
-Chain all findings and generate a bug bounty report
+Step 1  "Run full recon on target.com"
+        └─▶ recon-dominator maps the entire attack surface
+
+Step 2  "Scan all web apps for vulnerabilities"
+        └─▶ webapp-exploit-hunter tests for SQLi, XSS, SSRF, SSTI, IDOR...
+
+Step 3  "Test all discovered APIs"
+        └─▶ api-breaker finds BOLA, BFLA, JWT issues, mass assignment
+
+Step 4  "Check cloud infrastructure and buckets"
+        └─▶ cloud-pivot-finder maps cloud pivot paths
+
+Step 5  "Analyze attack paths from all data"
+        └─▶ attack-path-architect generates MITRE ATT&CK kill chains
+
+Step 6  "Chain all findings and generate a report"
+        └─▶ vuln-chain-composer produces bug bounty ready reports
 ```
 
-## Requirements
+> Each skill outputs structured JSON that feeds directly into the next skill.
 
-- **Python 3.8+** (standard library only)
-- **Claude Code** with skills support
+---
 
-### Optional (for faster scanning)
+## 📦 Requirements
+
+| Requirement | Details |
+|------------|---------|
+| **Python** | 3.8+ (standard library only) |
+| **Claude Code** | With skills support enabled |
+
+### Optional — faster scanning
 
 ```bash
+# Subdomain & HTTP probing
 go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 go install github.com/d3mondev/puredns/v2@latest
 go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
+
+# System tools (usually pre-installed)
+# dig · whois · nmap
 ```
 
-System tools (usually pre-installed): `dig`, `whois`, `nmap`
+---
 
-## Installation
+## 🚀 Installation
 
-### Method 1: Personal skills (all projects)
+<details>
+<summary><b>Method 1 — Personal skills (available in all projects)</b></summary>
 
 ```bash
 git clone https://github.com/maeitsec/claude-code-pentest.git
 cd claude-code-pentest
 
-for skill in recon-dominator attack-path-architect webapp-exploit-hunter api-breaker cloud-pivot-finder vuln-chain-composer; do
+for skill in recon-dominator attack-path-architect webapp-exploit-hunter \
+             api-breaker cloud-pivot-finder vuln-chain-composer; do
     cp -r "$skill" ~/.claude/skills/
 done
 ```
 
-### Method 2: Project-level skills (single project)
+</details>
+
+<details>
+<summary><b>Method 2 — Project-level skills (single project only)</b></summary>
 
 ```bash
 git clone https://github.com/maeitsec/claude-code-pentest.git
 cd your-project
 
 mkdir -p .claude/skills
-for skill in recon-dominator attack-path-architect webapp-exploit-hunter api-breaker cloud-pivot-finder vuln-chain-composer; do
+for skill in recon-dominator attack-path-architect webapp-exploit-hunter \
+             api-breaker cloud-pivot-finder vuln-chain-composer; do
     cp -r "/path/to/claude-code-pentest/$skill" .claude/skills/
 done
 ```
 
-### Method 3: Single skill
+</details>
+
+<details>
+<summary><b>Method 3 — Single skill</b></summary>
 
 ```bash
 cp -r recon-dominator ~/.claude/skills/
 ```
 
-## Usage
+</details>
 
-### Natural language (Claude auto-selects the right skill)
+---
+
+## 📖 Usage
+
+### Natural language — Claude picks the right skill automatically
 
 ```
 Run full recon on target.com
@@ -167,34 +242,14 @@ Chain all findings and generate a report
 /vuln-chain-composer
 ```
 
-## Full Pentest Workflow
+---
 
-```
-1. "Run full recon on target.com"
-   → recon-dominator maps the entire attack surface
-
-2. "Scan all web apps for vulnerabilities"
-   → webapp-exploit-hunter tests for SQLi, XSS, SSRF, SSTI, IDOR...
-
-3. "Test all discovered APIs"
-   → api-breaker finds BOLA, BFLA, JWT issues, mass assignment
-
-4. "Check cloud infrastructure and buckets"
-   → cloud-pivot-finder maps cloud pivot paths
-
-5. "Analyze attack paths from all data"
-   → attack-path-architect generates MITRE ATT&CK kill chains
-
-6. "Chain all findings and generate a report"
-   → vuln-chain-composer produces bug bounty ready reports
-```
-
-Each skill outputs structured JSON that feeds into the next skill in the pipeline.
-
-## Detailed Script Reference
+## 🔍 Script Reference
 
 <details>
-<summary><b>recon-dominator</b> — 8 scripts</summary>
+<summary><b>01 · recon-dominator</b> — 8 scripts</summary>
+
+<br/>
 
 | Script | Function |
 |--------|----------|
@@ -210,7 +265,9 @@ Each skill outputs structured JSON that feeds into the next skill in the pipelin
 </details>
 
 <details>
-<summary><b>attack-path-architect</b> — 3 scripts</summary>
+<summary><b>02 · attack-path-architect</b> — 3 scripts</summary>
+
+<br/>
 
 | Script | Function |
 |--------|----------|
@@ -221,7 +278,9 @@ Each skill outputs structured JSON that feeds into the next skill in the pipelin
 </details>
 
 <details>
-<summary><b>webapp-exploit-hunter</b> — 11 scripts</summary>
+<summary><b>03 · webapp-exploit-hunter</b> — 11 scripts</summary>
+
+<br/>
 
 | Script | Function |
 |--------|----------|
@@ -240,7 +299,9 @@ Each skill outputs structured JSON that feeds into the next skill in the pipelin
 </details>
 
 <details>
-<summary><b>api-breaker</b> — 8 scripts</summary>
+<summary><b>04 · api-breaker</b> — 8 scripts</summary>
+
+<br/>
 
 | Script | Function |
 |--------|----------|
@@ -256,7 +317,9 @@ Each skill outputs structured JSON that feeds into the next skill in the pipelin
 </details>
 
 <details>
-<summary><b>cloud-pivot-finder</b> — 7 scripts</summary>
+<summary><b>05 · cloud-pivot-finder</b> — 7 scripts</summary>
+
+<br/>
 
 | Script | Function |
 |--------|----------|
@@ -271,7 +334,9 @@ Each skill outputs structured JSON that feeds into the next skill in the pipelin
 </details>
 
 <details>
-<summary><b>vuln-chain-composer</b> — 6 scripts</summary>
+<summary><b>06 · vuln-chain-composer</b> — 6 scripts</summary>
+
+<br/>
 
 | Script | Function |
 |--------|----------|
@@ -284,52 +349,65 @@ Each skill outputs structured JSON that feeds into the next skill in the pipelin
 
 </details>
 
-## Architecture
+---
+
+## 🗂️ Repository Structure
 
 ```
 claude-code-pentest/
-├── README.md
-├── LICENSE
-├── DISCLAIMER.md
-├── SECURITY.md
-├── CONTRIBUTING.md
-├── CODE_OF_CONDUCT.md
-├── .gitignore
-├── recon-dominator/
+│
+├── 📄 README.md
+├── 📄 LICENSE
+├── 📄 DISCLAIMER.md
+├── 📄 SECURITY.md
+├── 📄 CONTRIBUTING.md
+├── 📄 CODE_OF_CONDUCT.md
+├── 📄 .gitignore
+│
+├── 🔍 recon-dominator/
 │   ├── SKILL.md
-│   ├── scripts/           (8 scripts)
-│   └── references/        (wordlists, tool setup)
-├── attack-path-architect/
+│   ├── scripts/           # 8 scripts
+│   └── references/        # wordlists, tool setup
+│
+├── 🗺️  attack-path-architect/
 │   ├── SKILL.md
-│   ├── scripts/           (3 scripts)
-│   └── references/        (MITRE ATT&CK mapping)
-├── webapp-exploit-hunter/
+│   ├── scripts/           # 3 scripts
+│   └── references/        # MITRE ATT&CK mapping
+│
+├── 🎯 webapp-exploit-hunter/
 │   ├── SKILL.md
-│   └── scripts/           (11 scripts)
-├── api-breaker/
+│   └── scripts/           # 11 scripts
+│
+├── 💥 api-breaker/
 │   ├── SKILL.md
-│   └── scripts/           (8 scripts)
-├── cloud-pivot-finder/
+│   └── scripts/           # 8 scripts
+│
+├── ☁️  cloud-pivot-finder/
 │   ├── SKILL.md
-│   └── scripts/           (7 scripts)
-└── vuln-chain-composer/
+│   └── scripts/           # 7 scripts
+│
+└── 🔗 vuln-chain-composer/
     ├── SKILL.md
-    └── scripts/           (6 scripts)
+    └── scripts/           # 6 scripts
 ```
 
-## Troubleshooting
+---
+
+## 🔧 Troubleshooting
 
 | Problem | Solution |
 |---------|----------|
 | Skill not triggering automatically | Invoke directly with `/skill-name` |
-| Scripts fail with "command not found" | Install optional Go tools (see Requirements) |
+| Scripts fail with "command not found" | Install optional Go tools (see [Requirements](#-requirements)) |
 | Permission denied on scripts | Run `chmod +x scripts/*.py` inside the skill folder |
 | Too many skills loaded | Install only the skills you need |
-| Rate limiting (429 errors) | Scripts auto-adjust rate; use `--delay` flag |
+| Rate limiting (429 errors) | Scripts auto-adjust rate — use `--delay` flag |
 
-## Legal Disclaimer
+---
 
-**This software is provided for authorized security testing and educational purposes only.**
+## ⚖️ Legal
+
+> **This software is provided for authorized security testing and educational purposes only.**
 
 By using this software, you agree that:
 
@@ -338,24 +416,32 @@ By using this software, you agree that:
 3. The authors are **not liable** for any misuse, damage, or legal consequences
 4. You will comply with all **applicable laws** in your jurisdiction
 
-Unauthorized access to computer systems is a criminal offense under the Computer Fraud and Abuse Act (CFAA), Computer Misuse Act, Budapest Convention on Cybercrime, and equivalent laws worldwide.
+Unauthorized access to computer systems is a criminal offense under the CFAA, Computer Misuse Act, Budapest Convention on Cybercrime, and equivalent laws worldwide.
 
-**Read the full [DISCLAIMER.md](DISCLAIMER.md) before using these tools.**
-
-## Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
-## License
-
-MIT License - See [LICENSE](LICENSE) for details.
-
-## Security
-
-Found a vulnerability in this project? See [SECURITY.md](SECURITY.md).
+📄 Read the full **[DISCLAIMER.md](DISCLAIMER.md)** before using these tools.
 
 ---
 
-<p align="center">
-  Built by <a href="https://maeitsec.github.io">maeitsec</a> — Offensive Security & AI Integration
-</p>
+## 🤝 Contributing
+
+Contributions are welcome! See **[CONTRIBUTING.md](CONTRIBUTING.md)** for guidelines.
+
+## 📜 License
+
+MIT License — see **[LICENSE](LICENSE)** for details.
+
+## 🔐 Security
+
+Found a vulnerability in this project? See **[SECURITY.md](SECURITY.md)**.
+
+---
+
+<div align="center">
+
+<br/>
+
+Built with ❤️ by **[maeitsec](https://maeitsec.github.io)** — Offensive Security & AI Integration
+
+<br/>
+
+</div>
