@@ -8,7 +8,7 @@ If you discover a security vulnerability in this project (the skills themselves,
 
 ### How to Report
 
-1. Email: **info@orizon.one**
+1. Email: **maeitsec@gmail.com**
 2. Include:
    - Description of the vulnerability
    - Steps to reproduce
