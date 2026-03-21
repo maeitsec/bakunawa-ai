@@ -1,0 +1,8 @@
+**/*_timcorp_net_ph*.json
+**/sqli_findings.json
+**/ssrf_findings.json
+**/xss_findings.json
+**/__pycache__/
+**/*.pyc
+frontend/node_modules/
+frontend/src/*.bak
