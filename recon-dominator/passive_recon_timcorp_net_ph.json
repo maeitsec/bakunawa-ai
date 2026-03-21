@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "domain": "timcorp.net.ph",
+    "timestamp": "2026-03-21T18:19:15.382204Z",
+    "type": "passive_recon",
+    "tool": "recon-dominator by orizon.one",
+    "sources_used": [
+      "crt.sh",
+      "hackertarget",
+      "rapiddns",
+      "wayback",
+      "subfinder",
+      "amass"
+    ],
+    "total_unique": 10
+  },
+  "source_counts": {
+    "crt.sh": 0,
+    "hackertarget": 2,
+    "rapiddns": 3,
+    "wayback": 5,
+    "subfinder": 10,
+    "amass": 0
+  },
+  "subdomains": [
+    {
+      "host": "csdemo.timcorp.net.ph",
+      "sources": [
+        "wayback",
+        "subfinder"
+      ]
+    },
+    {
+      "host": "go.timcorp.net.ph",
+      "sources": [
+        "wayback",
+        "subfinder"
+      ]
+    },
+    {
+      "host": "marketing.timcorp.net.ph",
+      "sources": [
+        "hackertarget",
+        "subfinder"
+      ]
+    },
+    {
+      "host": "servicedesk.timcorp.net.ph",
+      "sources": [
+        "rapiddns",
+        "wayback",
+        "subfinder"
+      ]
+    },
+    {
+      "host": "staging2.timcorp.net.ph",
+      "sources": [
+        "subfinder"
+      ]
+    },
+    {
+      "host": "support.timcorp.net.ph",
+      "sources": [
+        "subfinder"
+      ]
+    },
+    {
+      "host": "timcorp.net.ph",
+      "sources": [
+        "subfinder"
+      ]
+    },
+    {
+      "host": "www.servicedesk.timcorp.net.ph",
+      "sources": [
+        "subfinder"
+      ]
+    },
+    {
+      "host": "www.support.timcorp.net.ph",
+      "sources": [
+        "rapiddns",
+        "wayback",
+        "subfinder"
+      ]
+    },
+    {
+      "host": "www.timcorp.net.ph",
+      "sources": [
+        "hackertarget",
+        "rapiddns",
+        "wayback",
+        "subfinder"
+      ]
+    }
+  ]
+}

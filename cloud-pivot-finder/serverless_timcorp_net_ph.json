@@ -1,0 +1,15 @@
+{
+  "meta": {
+    "timestamp": "2026-03-21T18:17:30.001316Z",
+    "type": "serverless_discovery",
+    "tool": "cloud-pivot-finder by orizon.one",
+    "domain": "timcorp.net.ph"
+  },
+  "stats": {
+    "endpoints_discovered": 0,
+    "endpoints_accessible": 0,
+    "endpoints_with_issues": 0
+  },
+  "accessible_endpoints": [],
+  "all_results": []
+}

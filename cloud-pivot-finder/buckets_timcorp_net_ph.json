@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "domain": "timcorp.net.ph",
+    "timestamp": "2026-03-21T18:17:28.858901Z",
+    "type": "bucket_enumeration",
+    "tool": "cloud-pivot-finder by orizon.one",
+    "names_tested": 182
+  },
+  "stats": {
+    "total_found": 0,
+    "public_listing": 0,
+    "private": 0
+  },
+  "public_buckets": [],
+  "private_buckets": []
+}
