@@ -28,7 +28,7 @@ Project maintainers may remove, edit, or reject contributions that violate this 
 
 ## Reporting
 
-Report violations to **info@orizon.one**.
+Report violations to **security@maeitsec.github.io**.
 
 All reports will be reviewed and handled confidentially.
 
