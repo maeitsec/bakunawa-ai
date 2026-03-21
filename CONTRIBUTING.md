@@ -40,7 +40,7 @@ Open an issue describing:
   - JSON output with `meta` and `findings` structure
   - Summary banner printed to stdout at the end
 - Include `#!/usr/bin/env python3` shebang
-- Include docstring with skill name, description, and `Author: orizon.one`
+- Include docstring with skill name, description, and `Author: maeitsec`
 
 ### SKILL.md Files
 
