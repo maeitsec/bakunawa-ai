@@ -12,7 +12,7 @@
     <img src="https://img.shields.io/badge/pip_dependencies-0-brightgreen.svg" alt="Zero Dependencies">
   </p>
   <p align="center">
-    Built by <a href="https://orizon.one">orizon.one</a>
+    Built by <a href="https://maeitsec.github.io">maeitsec</a>
   </p>
 </p>
 
@@ -70,7 +70,7 @@ DOMAIN INPUT
 
 ```bash
 # Clone
-git clone https://github.com/Orizon-eu/claude-code-pentest.git
+git clone https://github.com/maeitsec/claude-code-pentest.git
 cd claude-code-pentest
 
 # Install all skills (personal - available in all your Claude Code projects)
@@ -117,7 +117,7 @@ System tools (usually pre-installed): `dig`, `whois`, `nmap`
 ### Method 1: Personal skills (all projects)
 
 ```bash
-git clone https://github.com/Orizon-eu/claude-code-pentest.git
+git clone https://github.com/maeitsec/claude-code-pentest.git
 cd claude-code-pentest
 
 for skill in recon-dominator attack-path-architect webapp-exploit-hunter api-breaker cloud-pivot-finder vuln-chain-composer; do
@@ -128,7 +128,7 @@ done
 ### Method 2: Project-level skills (single project)
 
 ```bash
-git clone https://github.com/Orizon-eu/claude-code-pentest.git
+git clone https://github.com/maeitsec/claude-code-pentest.git
 cd your-project
 
 mkdir -p .claude/skills
@@ -357,5 +357,5 @@ Found a vulnerability in this project? See [SECURITY.md](SECURITY.md).
 ---
 
 <p align="center">
-  Built by <a href="https://orizon.one">orizon.one</a> — Offensive Security & AI Integration
+  Built by <a href="https://maeitsec.github.io">maeitsec</a> — Offensive Security & AI Integration
 </p>
