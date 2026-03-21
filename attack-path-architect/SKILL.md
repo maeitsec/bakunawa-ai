@@ -2,7 +2,7 @@
 name: attack-path-architect
 description: Generates strategic attack trees and kill chains from reconnaissance data or domain input. Maps MITRE ATT&CK TTPs, identifies chaining opportunities, trust relationships, and prioritizes attack paths by feasibility and impact. Use when user asks for "attack path", "kill chain", "attack tree", "threat modeling from recon", "attack surface analysis", or "prioritize targets". Requires prior recon data or a domain to analyze. For authorized pentesting and red team engagements only.
 metadata:
-  author: orizon.one
+  author: maeitsec
   version: 1.0.0
 ---
 
