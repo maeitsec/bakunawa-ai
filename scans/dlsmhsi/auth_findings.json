@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "type": "auth_session_test",
+    "timestamp": "2026-03-22T05:07:28.453350Z",
+    "vulnerabilities_found": 1
+  },
+  "findings": [
+    {
+      "type": "missing_headers",
+      "url": "https://dlsmhsi.edu.ph",
+      "missing_headers": [
+        "Content-Security-Policy"
+      ],
+      "evidence": "Missing security headers: Content-Security-Policy",
+      "severity": "MEDIUM"
+    }
+  ]
+}

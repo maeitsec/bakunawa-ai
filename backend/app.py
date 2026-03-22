@@ -27,7 +27,6 @@ CLAUDE_BIN  = shutil.which("claude") or "claude"
 
 def claude(prompt: str, cwd: Path = BASE, timeout: int = 300):
     """Run claude --print <prompt> and return stdout + duration."""
-    prompt += "\n\nIMPORTANT: Do not run interactive scripts. Call Python classes directly. No subprocess or shell commands requiring user input."
     t0 = time.time()
     try:
         result = subprocess.run(
@@ -276,14 +275,14 @@ def custom_prompt():
 
 if __name__ == "__main__":
     print("""
-  ███╗   ██╗███████╗██╗   ██╗██████╗  ██████╗
-  ████╗  ██║██╔════╝██║   ██║██╔══██╗██╔═══██╗
-  ██╔██╗ ██║█████╗  ██║   ██║██████╔╝██║   ██║
-  ██║╚██╗██║██╔══╝  ██║   ██║██╔══██╗██║   ██║
-  ██║ ╚████║███████╗╚██████╔╝██║  ██║╚██████╔╝
-  ╚═╝  ╚═══╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝ ╚═════╝
-  Backend v2.0.0 · Claude Code powered · @maeitsec
-  http://localhost:5000
+  ██████╗  █████╗ ██╗  ██╗██╗   ██╗███╗   ██╗ █████╗ ██╗    ██╗ █████╗
+  ██╔══██╗██╔══██╗██║ ██╔╝██║   ██║████╗  ██║██╔══██╗██║    ██║██╔══██╗
+  ██████╔╝███████║█████╔╝ ██║   ██║██╔██╗ ██║███████║██║ █╗ ██║███████║
+  ██╔══██╗██╔══██║██╔═██╗ ██║   ██║██║╚██╗██║██╔══██║██║███╗██║██╔══██║
+  ██████╔╝██║  ██║██║  ██╗╚██████╔╝██║ ╚████║██║  ██║╚███╔███╔╝██║  ██║
+  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═╝ ╚══╝╚══╝ ╚═╝  ╚═╝
+  🐍  BakunawaAI · AI-Powered Penetration Testing · @maeitsec
+  Backend v2.0.0 · Claude Code powered · http://localhost:5000
 """)
     # Verify claude is available
     if not shutil.which("claude"):
