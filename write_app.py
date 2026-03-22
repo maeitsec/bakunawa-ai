@@ -1,4 +1,8 @@
-import { useState, useRef, useEffect } from "react";
+#!/usr/bin/env python3
+"""Run this script to write App.jsx directly — no copy-paste needed."""
+import os
+
+content = r"""import { useState, useRef, useEffect } from "react";
 
 const API = "http://localhost:5000";
 
@@ -319,3 +323,12 @@ function App() {
 }
 
 export default App;
+"""
+
+path = os.path.expanduser("~/AI_Pentesting/bakunawa-ai/frontend/src/App.jsx")
+os.makedirs(os.path.dirname(path), exist_ok=True)
+with open(path, "w") as f:
+    f.write(content)
+
+lines = content.count("\n")
+print(f"Written {lines} lines to {path}")
