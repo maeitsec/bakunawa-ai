@@ -2,7 +2,7 @@
 """
 Serverless and Container Endpoint Finder - cloud-pivot-finder
 Discovers Lambda URLs, API Gateways, Cloud Functions, Cloud Run, Azure Functions.
-Author: orizon.one
+Author: maeitsec
 """
 
 import argparse

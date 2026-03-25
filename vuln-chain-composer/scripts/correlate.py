@@ -2,7 +2,7 @@
 """
 Vulnerability Correlator - vuln-chain-composer
 Identifies chainable vulnerability combinations across domains.
-Author: orizon.one
+Author: maeitsec
 """
 
 import argparse

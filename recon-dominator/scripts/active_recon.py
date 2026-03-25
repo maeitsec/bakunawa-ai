@@ -2,7 +2,7 @@
 """
 Active Reconnaissance Module - recon-dominator
 DNS brute-force, zone transfers, and virtual host discovery.
-Author: orizon.one
+Author: maeitsec
 """
 
 import argparse

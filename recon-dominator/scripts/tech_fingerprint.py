@@ -2,7 +2,7 @@
 """
 Technology Fingerprinting Module - recon-dominator
 Detects web technologies, frameworks, CMS, and security headers.
-Author: orizon.one
+Author: maeitsec
 """
 
 import argparse

@@ -2,7 +2,7 @@
 """
 Passive Reconnaissance Module - recon-dominator
 Collects subdomains and intelligence without direct target contact.
-Author: orizon.one
+Author: maeitsec
 """
 
 import argparse

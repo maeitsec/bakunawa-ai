@@ -2,7 +2,7 @@
 """
 Cloud Provider Detector - cloud-pivot-finder
 Identifies cloud hosting from domain analysis.
-Author: orizon.one
+Author: maeitsec
 """
 
 import argparse

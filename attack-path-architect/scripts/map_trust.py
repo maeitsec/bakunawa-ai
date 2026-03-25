@@ -2,7 +2,7 @@
 """
 Trust Relationship Mapper - attack-path-architect
 Maps trust relationships between assets for attack chaining.
-Author: orizon.one
+Author: maeitsec
 """
 
 import argparse

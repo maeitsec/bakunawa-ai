@@ -2,7 +2,7 @@
 """
 Chain PoC Generator - vuln-chain-composer
 Generates Python scripts and curl commands that demonstrate full chain exploitation.
-Author: orizon.one
+Author: maeitsec
 """
 
 import argparse

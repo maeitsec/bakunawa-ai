@@ -2,7 +2,7 @@
 """
 API Security Report Generator Module - api-breaker
 Generates per-finding reports with OWASP API Top 10 mapping and remediation.
-Author: orizon.one
+Author: maeitsec
 """
 
 import argparse

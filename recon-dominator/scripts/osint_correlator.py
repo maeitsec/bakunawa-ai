@@ -2,7 +2,7 @@
 """
 OSINT Correlation Module - recon-dominator
 Gathers WHOIS, ASN, reverse IP, and public intelligence.
-Author: orizon.one
+Author: maeitsec
 """
 
 import argparse

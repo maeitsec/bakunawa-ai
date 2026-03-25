@@ -2,7 +2,7 @@
 """
 Findings Importer - vuln-chain-composer
 Normalizes vulnerability findings from multiple sources.
-Author: orizon.one
+Author: maeitsec
 """
 
 import argparse

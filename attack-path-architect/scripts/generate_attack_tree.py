@@ -2,7 +2,7 @@
 """
 Attack Tree Generator - attack-path-architect
 Generates prioritized attack trees with MITRE ATT&CK mapping.
-Author: orizon.one
+Author: maeitsec
 """
 
 import argparse

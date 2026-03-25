@@ -2,7 +2,7 @@
 """
 Report Generator - recon-dominator
 Consolidates all recon data into a unified report.
-Author: orizon.one
+Author: maeitsec
 """
 
 import argparse

@@ -2,7 +2,7 @@
 """
 Cloud Security Report Generator - cloud-pivot-finder
 Consolidates all cloud security findings into a prioritized report.
-Author: orizon.one
+Author: maeitsec
 """
 
 import argparse

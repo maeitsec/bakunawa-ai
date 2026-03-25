@@ -2,7 +2,7 @@
 """
 Asset Classifier - attack-path-architect
 Classifies discovered assets by type, exposure, and risk score.
-Author: orizon.one
+Author: maeitsec
 """
 
 import argparse

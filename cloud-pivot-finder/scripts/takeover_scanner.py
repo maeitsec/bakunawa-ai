@@ -2,7 +2,7 @@
 """
 Subdomain Takeover Scanner - cloud-pivot-finder
 Checks subdomains for dangling CNAME records that may be claimable.
-Author: orizon.one
+Author: maeitsec
 """
 
 import argparse

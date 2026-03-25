@@ -2,7 +2,7 @@
 """
 Bug Bounty Report Generator - vuln-chain-composer
 Generates HackerOne/Bugcrowd-ready reports with full chain details.
-Author: orizon.one
+Author: maeitsec
 """
 
 import argparse

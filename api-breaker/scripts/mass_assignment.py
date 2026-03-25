@@ -2,7 +2,7 @@
 """
 Mass Assignment Tester Module - api-breaker
 Tests for mass assignment vulnerabilities on API creation/update endpoints.
-Author: orizon.one
+Author: maeitsec
 """
 
 import argparse

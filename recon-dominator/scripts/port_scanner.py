@@ -2,7 +2,7 @@
 """
 Port Scanner & Live Host Detection - recon-dominator
 Probes hosts for open ports, services, and HTTP responses.
-Author: orizon.one
+Author: maeitsec
 """
 
 import argparse

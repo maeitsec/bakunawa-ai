@@ -2,7 +2,7 @@
 """
 Cloud Storage Bucket Enumerator - cloud-pivot-finder
 Discovers and tests S3, GCS, and Azure Blob storage.
-Author: orizon.one
+Author: maeitsec
 """
 
 import argparse

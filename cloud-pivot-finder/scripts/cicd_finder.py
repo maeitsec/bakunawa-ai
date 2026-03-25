@@ -3,7 +3,7 @@
 CI/CD and IaC Exposure Finder - cloud-pivot-finder
 Discovers exposed CI/CD interfaces, Terraform state, CloudFormation templates,
 Docker/K8s configs, and environment files on target hosts.
-Author: orizon.one
+Author: maeitsec
 """
 
 import argparse

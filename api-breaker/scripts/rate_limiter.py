@@ -2,7 +2,7 @@
 """
 Rate Limiter Tester Module - api-breaker
 Tests API rate limiting enforcement and bypass techniques.
-Author: orizon.one
+Author: maeitsec
 """
 
 import argparse

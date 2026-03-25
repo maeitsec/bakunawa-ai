@@ -2,7 +2,7 @@
 """
 Authorization Tester Module - api-breaker
 Tests for BOLA (Broken Object Level Authorization) and BFLA (Broken Function Level Authorization).
-Author: orizon.one
+Author: maeitsec
 """
 
 import argparse

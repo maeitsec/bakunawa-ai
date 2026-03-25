@@ -2,7 +2,7 @@
 """
 Cloud Metadata Pivot Path Mapper - cloud-pivot-finder
 Identifies SSRF vectors and maps metadata->credential->pivot chains.
-Author: orizon.one
+Author: maeitsec
 """
 
 import argparse

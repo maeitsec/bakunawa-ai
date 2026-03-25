@@ -2,7 +2,7 @@
 """
 Business Logic Tester Module - api-breaker
 Tests for business logic vulnerabilities: price manipulation, race conditions, and more.
-Author: orizon.one
+Author: maeitsec
 """
 
 import argparse

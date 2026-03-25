@@ -2,7 +2,7 @@
 """
 Google Dorking Module - recon-dominator
 Generates and organizes Google dork queries for target domains.
-Author: orizon.one
+Author: maeitsec
 """
 
 import argparse

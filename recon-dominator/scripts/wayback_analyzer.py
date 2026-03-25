@@ -2,7 +2,7 @@
 """
 Wayback Machine Analyzer - recon-dominator
 Extracts historical endpoints, parameters, JS files, and removed content.
-Author: orizon.one
+Author: maeitsec
 """
 
 import argparse

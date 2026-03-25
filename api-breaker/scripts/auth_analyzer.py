@@ -2,7 +2,7 @@
 """
 Authentication Analyzer Module - api-breaker
 Analyzes and tests API authentication mechanisms including JWT attacks.
-Author: orizon.one
+Author: maeitsec
 """
 
 import argparse

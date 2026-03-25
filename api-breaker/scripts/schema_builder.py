@@ -2,7 +2,7 @@
 """
 Schema Builder Module - api-breaker
 Reconstructs API schema from observed behavior, even without documentation.
-Author: orizon.one
+Author: maeitsec
 """
 
 import argparse

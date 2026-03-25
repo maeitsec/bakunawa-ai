@@ -2,7 +2,7 @@
 """
 Impact Calculator - vuln-chain-composer
 Recalculates CVSS and severity when vulnerabilities are chained.
-Author: orizon.one
+Author: maeitsec
 """
 
 import argparse

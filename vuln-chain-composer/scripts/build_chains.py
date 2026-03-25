@@ -2,7 +2,7 @@
 """
 Chain Builder - vuln-chain-composer
 Takes correlated findings and builds concrete exploit chains with step-by-step instructions.
-Author: orizon.one
+Author: maeitsec
 """
 
 import argparse
