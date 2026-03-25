@@ -2,7 +2,7 @@
 """
 API Discovery Module - api-breaker
 Discovers REST, GraphQL, and SOAP API endpoints from domains.
-Author: orizon.one
+Author: maietsc
 """
 
 import argparse
